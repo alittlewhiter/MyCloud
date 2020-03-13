@@ -1,0 +1,29 @@
+Windows Registry Editor Version 5.00 -- for administrater!!!
+ 
+[HKEY_CLASSES_ROOT\Directory\shell\AdminOpenCmd]
+@="管理员打开命令提示符"
+"Icon"="cmd.exe"
+ 
+[HKEY_CLASSES_ROOT\Directory\shell\AdminOpenCmd\command]
+@="PowerShell -windowstyle hidden -Command \"Start-Process cmd.exe -ArgumentList '/s,/k, pushd,%V' -Verb RunAs\""
+ 
+[HKEY_CLASSES_ROOT\Directory\Background\shell\AdminOpenCmd]
+@="管理员打开命令窗口"
+"Icon"="cmd.exe"
+ 
+[HKEY_CLASSES_ROOT\Directory\Background\shell\AdminOpenCmd\command]
+@="PowerShell -windowstyle hidden -Command \"Start-Process cmd.exe -ArgumentList '/s,/k, pushd,%V' -Verb RunAs\""
+ 
+[HKEY_CLASSES_ROOT\Drive\shell\AdminOpenCmd]
+@="管理员打开命令窗口"
+"Icon"="cmd.exe"
+ 
+[HKEY_CLASSES_ROOT\Drive\shell\AdminOpenCmd\command]
+@="PowerShell -windowstyle hidden -Command \"Start-Process cmd.exe -ArgumentList '/s,/k, pushd,%V' -Verb RunAs\""
+ 
+[HKEY_CLASSES_ROOT\LibraryFolder\background\shell\AdminOpenCmd]
+@="管理员打开命令窗口"
+"Icon"="cmd.exe"
+ 
+[HKEY_CLASSES_ROOT\LibraryFolder\background\shell\AdminOpenCmd\command]
+@="PowerShell -windowstyle hidden -Command \"Start-Process cmd.exe -ArgumentList '/s,/k, pushd,%V' -Verb RunAs\""
